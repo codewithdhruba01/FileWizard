@@ -1,0 +1,79 @@
+/* Dark Mode Styles */
+body.dark-mode {
+    --text-color: #E2E8F0;
+    --text-light: #94A3B8;
+    --bg-color: #0F172A;
+    --bg-light: #1E293B;
+    --bg-dark: #334155;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .theme-toggle button i {
+    color: #F59E0B;
+}
+
+body.dark-mode .theme-toggle button:hover {
+    background-color: #334155;
+}
+
+body.dark-mode .upload-area {
+    border-color: #4B5563;
+}
+
+body.dark-mode .upload-area:hover {
+    background-color: rgba(59, 130, 246, 0.1);
+}
+
+body.dark-mode .upload-area.dragover {
+    background-color: rgba(59, 130, 246, 0.15);
+    border-color: var(--primary-color);
+}
+
+body.dark-mode .feature-icon {
+    background-color: rgba(59, 130, 246, 0.2);
+}
+
+body.dark-mode .progress-bar-container {
+    background-color: #334155;
+}
+
+body.dark-mode footer {
+    background-color: #0F172A;
+    border-top: 1px solid #334155;
+}
+
+/* Dark Mode Animation */
+.theme-toggle button {
+    position: relative;
+    overflow: hidden;
+}
+
+.theme-toggle button::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 5px;
+    height: 5px;
+    background: rgba(255, 255, 255, 0.3);
+    opacity: 0;
+    border-radius: 100%;
+    transform: scale(1, 1) translate(-50%);
+    transform-origin: 50% 50%;
+}
+
+.theme-toggle button:focus:not(:active)::after {
+    animation: ripple 1s ease-out;
+}
+
+@keyframes ripple {
+    0% {
+        transform: scale(0, 0);
+        opacity: 0.5;
+    }
+    100% {
+        transform: scale(30, 30);
+        opacity: 0;
+    }
+}
