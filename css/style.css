@@ -995,4 +995,7 @@ footer p {
     .social-icons {
         justify-content: center;
     }
+    .social-media h3 {
+        text-align: center;
+    }
 }
