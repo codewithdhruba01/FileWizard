@@ -57,7 +57,5 @@ Just double-click `index.html` to open in your browser.
 
 ---
 
+Author - Dhrubaraj Pati
 
-## 📄 License
-
-This project is free to use and modify for personal or educational purposes.
